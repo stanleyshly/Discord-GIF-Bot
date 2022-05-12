@@ -26,7 +26,7 @@ nlp = spacy.load(os.getenv("NLP_MODEL"))
 
 # set the apikey and limit
 apikey = os.getenv("TENOR_TOKEN")
-max_gif_lmt = os.getenv("NUMBER_IMGUR_SEARCH") # max gif to return
+max_gif_lmt = os.getenv("NUMBER_TENOR_SEARCH") # max gif to return
 
 
 @client.event
@@ -56,7 +56,7 @@ async def on_message(message):
                     # our test search
                     search_term = search_term_big_array[random.randint(0,len(search_term_big_array)-1)]
                     logging.info("Search Term is: "+ search_term)
-                    logging.info("Imjur Search Finished in: "+ str(end_time-start_time)+ " sec")
+                    logging.info("Tenor Search Finished in: "+ str(end_time-start_time)+ " sec")
                     # get the top 8 GIFs for the search term
                     r = requests.get(
                         "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, apikey, max_gif_lmt))
@@ -64,7 +64,7 @@ async def on_message(message):
                         # load the GIFs using the urls for the smaller GIF sizes
                         top_8gifs = json.loads(r.content)
                         if len(top_8gifs['results']) == 0:
-                            logging.info("IMGUR did not return any search terms")
+                            logging.info("Tenor did not return any search terms")
                             await message.channel.send("https://c.tenor.com/pQJqTGuF-FIAAAAC/simply-delicious.gif") 
                             end_time = time.time()    
                             logging.info("GIF Send Finished in: "+ str(end_time-start_time)+ " sec")   

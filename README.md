@@ -12,8 +12,8 @@ Inspired by Pranav, of course
 DISCORD_TOKEN=DISCORDTOKENGOESHERE
 TENOR_TOKEN=TENORTOKENGOESHERE
 WHITELIST_CHANNEL=["stanley-bot-playground"]
-NUMBER_IMGUR_SEARCH=8
-SPACY_MODEL=en_core_web_trf
+NUMBER_TENOR_SEARCH=8
+NLP_MODEL=en_core_web_trf
 ```
 4) Add Discord and Tenor token 
 5) Create array with all channels where bot will reply with GIFs (Warning, Failure to do so correctly) will result in very annoyed ex-friends.

@@ -2212,3 +2212,12 @@ Loop thread traceback (most recent call last):
 2022-05-11 20:24:08.034 INFO main - on_message: Imjur Search Finished in: 0.0 sec
 2022-05-11 20:24:08.275 INFO main - on_message: Imjur Search Finished in: 0.2418062686920166 sec
 2022-05-11 20:24:08.575 INFO main - on_message: GIF Send Finished in: 0.29980993270874023 sec
+2022-05-11 20:46:56.649 INFO gateway - poll_event: Websocket closed with 4003, attempting a reconnect.
+2022-05-11 20:46:56.650 INFO client - connect: Got a request to RESUME the websocket.
+2022-05-11 20:46:56.928 INFO gateway - resume: Shard ID None has sent the RESUME payload.
+2022-05-11 20:46:57.024 INFO gateway - received_message: Shard ID None session has been invalidated.
+2022-05-11 20:46:57.119 INFO client - connect: Got a request to IDENTIFY the websocket.
+2022-05-11 20:47:02.311 INFO gateway - identify: Shard ID None has sent the IDENTIFY payload.
+2022-05-11 20:47:02.433 INFO gateway - poll_event: Websocket closed with 4004, cannot reconnect.
+2022-05-11 20:47:02.434 INFO client - run: Cleaning up tasks.
+2022-05-11 20:47:02.435 INFO client - _cleanup_loop: Closing the event loop.
